@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>login</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        /* background-color: #e74c3c; */
+        background-color: #6c5ce7;
+        width: 100%;
+        top: 0;
+      }
+
+      .outside {
+        display: block;
+        height: 500px;
+        width: 800px;
+        background-color: #ecf0f1;
+
+        border: 8px inset #6c5ce7;
+        margin-top: 50px;
+        margin-left: 300px;
+        margin-bottom: 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
+          0 6px 20px 0 rgba(0, 0, 0, 0.25);
+
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #login {
+        height: 500px;
+        width: 400px;
+
+        /* border:2px solid black; */
+
+        font-size: 20px;
+
+        text-transform: capitalize;
+
+        padding-left: 15px;
+        color: #6c5ce7;
+      }
+
+      #vid video {
+        object-fit: cover;
+
+        border-bottom-right-radius: 91px;
+
+        border-top-right-radius: 2px;
+      }
+
+      .inp {
+        height: 35px;
+        width: 330px;
+        border: 3px solid #6c5ce7;
+      }
+
+      .inp:hover {
+        transform: scale(1.05);
+      }
+
+      #button {
+        height: 35px;
+        width: 330px;
+        border-radius: 20px;
+        color: #6c5ce7;
+        transition: 1s;
+      }
+
+      #button:hover {
+        background-color: #6c5ce7;
+
+        color: black;
+      }
+
+      #title {
+        position: absolute;
+        width: 400px;
+        top: 187px;
+        right: 214px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        line-height: 4em;
+        text-shadow: 3px 3px 3px #6c5ce7;
+        color: #ecf0f1;
+      }
+
+      #side {
+        position: absolute;
+        right: 20px;
+        top: 200px;
+        font-size: 30px;
+        color: whitesmoke;
+        padding: 10px 10px 10px 10px;
+        transition: 0.5s;
+      }
+      #side ul li {
+        list-style: none;
+      }
+
+      #side ul li:hover {
+        /* font-size: 45px;
+color:rgb(65, 223, 65); */
+
+        transform: scale(1.5);
+      }
+
+      #foot {
+        position: absolute;
+        
+        width: 100%;
+        height: 70px;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 800px;
+
+        background-color: black;
+      }
+
+      #foot ul li {
+        display: inline-block;
+        /* float:left; */
+
+        list-style: none;
+
+        color: white;
+        margin-left: 220px;
+      }
+
+      #foot ul li :hover {
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outside">
+      <form id="login" action="/" method="POST">
+        <h1 style="text-align: center; color: #6c5ce7">log in</h1>
+
+        <p>
+          enter name : <br />
+          <br />
+          <input
+            type="text"
+            class="inp"
+            placeholder="enter name"
+            value=""
+            name="name"
+          />
+        </p>
+
+        <p>
+          enter email : <br />
+          <br />
+          <input
+            type="email"
+            class="inp"
+            placeholder="enter email"
+            value=""
+            name="email"
+          />
+        </p>
+
+        <p>
+          enter password: <br />
+          <br />
+          <input type="password"  class="inp"   placeholder="password"  value=""   name="password" />
+
+        </p>
+        <input type="submit" value="submit" placeholder="submit" id="button" />
+
+      
+      </form>
+
+      <div id="vid">
+
+      <img src="https://www.artzolo.com/sites/default/files/uploads/multi/5131/largest/whatsapp_image_2017-03-02_at_3.57.09_pm.jpeg" height="499px" width="397px" style =" border-radius : 0 0 90px 0"> 
+
+
+      </img>
+
+      </div>
+    </div>
+
+    <div id="title">
+      <h1>welcome to log in banarasi craft</h1>
+    </div>
+
+    <aside>
+      <div id="side">
+        <ul>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-whatsapp"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fas fa-envelope"></i></li>
+          <li><i class="fab fa-pinterest"></i></li>
+        </ul>
+      </div>
+    </aside>
+
+    <footer>
+      <div id="foot">
+        <ul>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fas fa-code"></i></li>
+          <li><i class="fas fa-id-card"></i></li>
+          <li><i class="fab fa-google-play"></i></li>
+        </ul>
+        <p style="color: white; text-align: center">
+          Copyright © 2007 - 2020 - Free CSS. All Rights Reserved,powered by Rak
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
