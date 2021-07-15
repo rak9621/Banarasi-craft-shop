@@ -8,7 +8,11 @@ const orderemailsender = require('../public/orderEmail')
 const welemailsender = require('../public/logWelEmail')
 const port = process.env.PORT || 3000
 
+
+
 app.set("view engine" ,"hbs")
+
+app.use(express.static('images'))
 app.use(express.json())
 app.use(express.urlencoded ({extended:false}))
 
@@ -22,11 +26,13 @@ app.get('/',(req,res) => {
 })
 
 var emailadd 
+var userName
 app.post('/',async (req,res) => {
     
 try {
 
     emailadd = req.body.email
+    userName = req.body.name
     
    const registerEmployee = new Register({
     
@@ -40,7 +46,11 @@ try {
  const registerdata = await registerEmployee.save()
 
 setTimeout(welemailsender,10000,emailadd)
-   res.status(201).render("home")
+
+
+
+
+   res.status(201).render("home", {userName:userName})
 
     } catch (error) {
 
@@ -60,9 +70,9 @@ app.post('/order1',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'TRUNKUPELPHANT',
+         name : 'old lion',
          size:6,
-         price:1800
+         price:1
 
         })
      
@@ -92,9 +102,9 @@ app.post('/order2',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'family elephant 6 5 4',
+         name : 'chaddar elephant ',
          size:6,
-         price:3500
+         price:2
 
         })
      
@@ -126,9 +136,9 @@ app.post('/order3',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'elephantfine',
+         name : 'elephantfine deep carving ',
          size:8,
-         price:4000
+         price:3
 
         })
      
@@ -161,9 +171,9 @@ app.post('/order4',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'candel bowl',
+         name : 'lighting bowl',
          size:10,
-         price:2000
+         price:4
 
         })
      
@@ -196,9 +206,9 @@ app.post('/order5',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'sarsojali',
+         name : 'micro hole elephant',
          size:10,
-         price:10000
+         price:5
 
         })
      
@@ -232,9 +242,9 @@ app.post('/order6',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'camel',
+         name : 'trunkup elephant',
          size:12,
-         price:1600
+         price:6
 
         })
      
@@ -267,9 +277,9 @@ app.post('/order7',async(req,res) => {
  
         const orderitem = new Order({
          
-         name : 'egg',
+         name : 'camel',
          size:5,
-         price:1200
+         price:7
 
         })
      
@@ -302,8 +312,8 @@ app.post('/order8',async(req,res) => {
         const orderitem = new Order({
          
          name : 'ELPHANTfine',
-         size:6,
-         price:1500
+         size:4,
+         price:8
 
         })
      
